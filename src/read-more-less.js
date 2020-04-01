@@ -1,10 +1,8 @@
 
-
 import React, { PureComponent, Fragment } from 'react';
 import styles from './styles.module.css'
 
 import PropTypes from 'prop-types';
-
 
 class ReadMoreLess extends PureComponent {
 	state = {
@@ -32,23 +30,25 @@ class ReadMoreLess extends PureComponent {
 	render() {
 		const { initialText, moreText } = this.props;
 		const { isExpanded } = this.state;
+		console.log("props", this.props)
+		console.log("state", this.state)
 
 		return (
 			<div>
 				{!isExpanded && <p>{initialText}</p>}
 				{!isExpanded && (
 					<Fragment>
-						<span onClick={this.loadMore} className={styles.spanText}>
+						<button onClick={this.loadMore} align="right">
 							Read More
-            </span>
+            </button>
 					</Fragment>
 				)}
-				{isExpanded && <p>{moreText}</p>}
+				{isExpanded && <Text>{moreText}</Text>}
 				{isExpanded && (
 					<Fragment>
-						<span onClick={this.loadLess} className={styles.spanText}>
+						<button onClick={this.loadLess} align="right">
 							Read Less
-            </span>
+            </button>
 					</Fragment>
 				)}
 			</div>

@@ -7,3 +7,10 @@
   font-size: 2em;
   text-align: center;
 }
+
+.spanText {
+  color: blue;
+  cursor: pointer;
+  float: left;
+  width: 95%;
+}
