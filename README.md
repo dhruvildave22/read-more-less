@@ -15,12 +15,27 @@ npm install --save read-more-less
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'read-more-less'
+import ReadMoreLess from 'read-more-less'
 import 'read-more-less/dist/index.css'
 
-class Example extends Component {
+const initialText =
+    <div>
+      'Any Text Here'
+    </div>
+    ;
+  const moreText =
+    <div>
+     'Any Text Here with more Text'
+    </div>
+    ;
+
+class ReadMoreLess extends Component {
   render() {
-    return <MyComponent />
+    return 
+    <ReadMoreLess
+      initialText={initialText}
+      moreText={moreText}
+    />
   }
 }
 ```
